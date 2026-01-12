@@ -18,7 +18,10 @@ import {
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
+type ChatCompletionRequestMessage = {
+  role: "system" | "user" | "assistant";
+  content: string;
+};
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
 import UserAvatar from "@/components/UserAvatar";
